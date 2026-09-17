@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus & Bruna",
-  description: "Site do casamento de Matheus e Bruna",
+  title: "Bruna & Matheus",
+  description: "Site do casamento de Bruna e Matheus",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
