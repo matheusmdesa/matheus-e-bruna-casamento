@@ -13,6 +13,7 @@ export type EventScheduleItem = {
   title: string;
   time: string;
   description: string;
+  icon: "location" | "reception";
 };
 
 export const coupleNames = {
@@ -68,10 +69,12 @@ export const eventSchedule: EventScheduleItem[] = [
     title: "Cerimônia",
     time: "16h",
     description: `${eventInfo.ceremonyTime} · ${eventInfo.venueName}`,
+    icon: "location",
   },
   {
     title: "Recepção",
     time: "18h",
     description: "Jantar, discursos e festa",
+    icon: "reception",
   },
 ];

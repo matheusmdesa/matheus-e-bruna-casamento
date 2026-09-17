@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Pinyon_Script, Cormorant_Garamond, Jost } from "next/font/google";
+import { Nav } from "@/components/Nav";
 import "./globals.css";
 
 const pinyon = Pinyon_Script({
@@ -32,7 +33,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${pinyon.variable} ${cormorant.variable} ${jost.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Nav />
+        {children}
+      </body>
     </html>
   );
 }

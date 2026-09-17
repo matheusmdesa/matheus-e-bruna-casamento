@@ -1,4 +1,3 @@
-import { Nav } from "@/components/Nav";
 import { Medallion } from "@/components/Medallion";
 import { Ribbon } from "@/components/Ribbon";
 import { Eyebrow } from "@/components/Eyebrow";
@@ -9,8 +8,6 @@ import { coupleNames, eventInfo } from "@/lib/content/site-content";
 export default function Home() {
   return (
     <main>
-      <Nav />
-
       <section className="relative flex flex-col items-center overflow-hidden bg-preto px-6 pb-[50px] pt-[46px]">
         <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_150px_40px_rgba(0,0,0,0.7)]" />
         <Eyebrow tone="light">Vamos nos casar</Eyebrow>

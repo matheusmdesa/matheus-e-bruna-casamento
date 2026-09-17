@@ -1,23 +1,27 @@
-import { Nav } from "@/components/Nav";
+import type { Metadata } from "next";
 import { Eyebrow } from "@/components/Eyebrow";
 import { DetailsCard } from "@/components/DetailsCard";
 import { LocationIcon, ReceptionIcon } from "@/components/icons/LineIcons";
 import { eventInfo, eventSchedule, coupleNames } from "@/lib/content/site-content";
 import { buildGoogleMapsUrl } from "@/lib/maps";
 
+export const metadata: Metadata = {
+  title: "Evento — Bruna & Matheus",
+};
+
 export default function EventoPage() {
   const mapsUrl = buildGoogleMapsUrl(eventInfo.addressForMaps);
 
   return (
     <main>
-      <Nav />
+      <h1 className="sr-only">Evento — {coupleNames.display}</h1>
       <section className="flex flex-col items-center bg-preto px-6 pb-14 pt-14">
         <Eyebrow tone="light">Onde &amp; quando</Eyebrow>
         <div className="mt-6">
           <DetailsCard seal={coupleNames.initials}>
             {eventSchedule.map((item) => (
               <div key={item.title} className="flex items-start gap-2.5">
-                {item.title === "Cerimônia" ? (
+                {item.icon === "location" ? (
                   <LocationIcon className="mt-0.5 h-4 w-4 flex-none text-cinza-medio" />
                 ) : (
                   <ReceptionIcon className="mt-0.5 h-4 w-4 flex-none text-cinza-medio" />

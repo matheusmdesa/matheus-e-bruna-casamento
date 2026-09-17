@@ -10,7 +10,7 @@ describe('Eyebrow', () => {
 
   it('uses the light tone class when tone="light"', () => {
     render(<Eyebrow tone="light">Bem-vindos</Eyebrow>)
-    expect(screen.getByText('Bem-vindos')).toHaveClass('text-white/40')
+    expect(screen.getByText('Bem-vindos')).toHaveClass('text-white/55')
   })
 
   it('uses the dark tone class by default', () => {
