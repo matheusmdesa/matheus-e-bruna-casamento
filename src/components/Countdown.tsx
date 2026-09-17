@@ -12,18 +12,19 @@ const UNITS: { key: keyof CountdownParts; label: string }[] = [
   { key: 'seconds', label: 'Seg' },
 ];
 
+const ZERO_PARTS: CountdownParts = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
 export function Countdown({ targetDateISO }: CountdownProps) {
-  const target = new Date(targetDateISO);
-  const [parts, setParts] = useState<CountdownParts>(() =>
-    getCountdownParts(target, new Date())
-  );
+  const [parts, setParts] = useState<CountdownParts | null>(null);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setParts(getCountdownParts(new Date(targetDateISO), new Date()));
-    }, 1000);
+    const update = () => setParts(getCountdownParts(new Date(targetDateISO), new Date()));
+    update();
+    const id = setInterval(update, 1000);
     return () => clearInterval(id);
   }, [targetDateISO]);
+
+  const display = parts ?? ZERO_PARTS;
 
   return (
     <div className="mt-9 flex justify-center">
@@ -35,7 +36,7 @@ export function Countdown({ targetDateISO }: CountdownProps) {
           }`}
         >
           <span className="block font-serif text-[29px] font-semibold text-preto">
-            {String(parts[key]).padStart(2, '0')}
+            {String(display[key]).padStart(2, '0')}
           </span>
           <span className="text-[8.5px] uppercase tracking-[0.2em] text-cinza-medio">
             {label}
