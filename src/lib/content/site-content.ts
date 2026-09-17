@@ -23,8 +23,8 @@ export const coupleNames = {
 } as const;
 
 export const eventInfo = {
-  dateISO: "2026-04-04",
-  dateLabel: "04 de Abril de 2026",
+  dateISO: "2027-04-04",
+  dateLabel: "04 de Abril de 2027",
   ceremonyTime: "16h",
   venueName: "Espaço [Local a definir]",
   addressForMaps: "Espaço [Local a definir], [Endereço a definir]",
