@@ -1,7 +1,14 @@
-# Site de Casamento — Matheus e Bruna
+# Site de Casamento — Bruna e Matheus
 
 Data: 2026-09-16
 Status: Aprovado para planejamento de implementação
+
+> **Nota (2026-09-17):** convenção de conteúdo definida — o nome da Bruna
+> vem sempre primeiro em qualquer texto do site ("Bruna & Matheus"), não
+> "Matheus & Bruna". A identidade visual (paleta de cores, tipografia)
+> desta etapa foi substituída pela definida em
+> [2026-09-17-etapa1-conteudo-publico-design.md](2026-09-17-etapa1-conteudo-publico-design.md)
+> — ver esse documento para a direção visual vigente.
 
 ## 1. Visão geral
 
